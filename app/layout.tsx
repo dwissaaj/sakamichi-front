@@ -1,14 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Comfortaa, Barlow, Shippori_Mincho, Dela_Gothic_One } from "next/font/google";
 import "./globals.css";
+import { HeroUIProvider } from "@heroui/react";
+import {ThemeProvider as NextThemesProvider} from "next-themes";
+import { Providers } from "./providers";
+const jpShippori = Shippori_Mincho({
+  weight: ["400", "600", "800"],
+  subsets: ["latin"],
+  variable: "--font-jpShippori"
+});
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const jpDela = Dela_Gothic_One({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-jpDela",
+});
+const ltComfortaa = Comfortaa({
+  variable: "--font-ltComfortaa",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ltBarlow = Barlow({
+  weight: ["200", "400", "800"],
+  variable: "--font-ltBarlow",
   subsets: ["latin"],
 });
 
@@ -22,12 +36,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${jpDela.variable} ${jpShippori.variable} ${ltBarlow.variable} ${ltComfortaa.variable} antialiased`}
       >
+        
+      
         {children}
+     
+     
       </body>
     </html>
   );
