@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
-import { Comfortaa, Barlow, Shippori_Mincho, Dela_Gothic_One } from "next/font/google";
+import {
+  Comfortaa,
+  Barlow,
+  Shippori_Mincho,
+  Dela_Gothic_One,
+} from "next/font/google";
 import "./globals.css";
 import { HeroUIProvider } from "@heroui/react";
-import {ThemeProvider as NextThemesProvider} from "next-themes";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Providers } from "./providers";
 const jpShippori = Shippori_Mincho({
   weight: ["400", "600", "800"],
   subsets: ["latin"],
-  variable: "--font-jpShippori"
+  variable: "--font-jpShippori",
 });
 
 const jpDela = Dela_Gothic_One({
@@ -36,17 +41,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
       <body
         className={`${jpDela.variable} ${jpShippori.variable} ${ltBarlow.variable} ${ltComfortaa.variable} antialiased`}
       >
-        
-      
-        {children}
-     
-     
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
