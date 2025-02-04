@@ -6,9 +6,8 @@ import {
   Dela_Gothic_One,
 } from "next/font/google";
 import "./globals.css";
-import { HeroUIProvider } from "@heroui/react";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Providers } from "./providers";
+import Navigation from "./components/navigation/Navigation";
 const jpShippori = Shippori_Mincho({
   weight: ["400", "600", "800"],
   subsets: ["latin"],
@@ -46,7 +45,10 @@ export default function RootLayout({
       <body
         className={`${jpDela.variable} ${jpShippori.variable} ${ltBarlow.variable} ${ltComfortaa.variable} antialiased`}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <Navigation />
+          {children}
+          </Providers>
       </body>
     </html>
   );
