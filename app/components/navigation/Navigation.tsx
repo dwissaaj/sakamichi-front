@@ -33,18 +33,61 @@ export default function Navigation() {
         <SakamichiLogo />
         <p className="font-bold text-inherit">Sakamichi</p>
       </NavbarBrand>
-      <NavbarContent  className="hidden sm:flex gap-4" justify="center">
-      <NavbarItem isActive={pathname.startsWith("/single")}>
-          <Link   color="foreground" aria-current="page" href="/single">
-            Single
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive={pathname.startsWith("/member")}>
+      <NavbarContent className="hidden sm:flex gap-6" justify="center">
+      <Dropdown>
+          <NavbarItem className="mx-2" isActive={pathname.startsWith("/single")}>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                radius="sm"
+                variant="light"
+                
+              >
+                Single
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu
+            aria-label="All Single"
+            className="w-[340px]"
+          >
+            <DropdownItem
+              key="newest"
+              description="All Newest Sakamichi Group Single Release"
+            >
+              <Link aria-current="page" color="foreground" href="/single">
+              New Release
+              </Link>
+            </DropdownItem>
+            <DropdownItem
+              key="nogizaka46"
+              description="Nogizaka46 Single Release Data"
+          
+            >
+              Nogizaka46
+            </DropdownItem>
+            <DropdownItem
+              key="sakurazaka46"
+              description="Sakurazaka46 Single Release Data"
+          
+            >
+              Sakurazaka46
+            </DropdownItem>
+            <DropdownItem
+              key="hinatazaka46"
+              description="Hinatazaka46 Single Release Data"
+          
+            >
+              Hinatazaka46
+            </DropdownItem>
+            </DropdownMenu>
+            </Dropdown>
+        <NavbarItem className="mx-2" isActive={pathname.startsWith("/member")}>
           <Link aria-current="page" color="foreground" href="/member">
             Members
           </Link>
-        </NavbarItem>
-        <NavbarItem isActive={pathname.startsWith("/group")}>
+        </NavbarItem >
+        <NavbarItem className="mx-2" isActive={pathname.startsWith("/group")}>
           <Link aria-current="page" color="foreground" href="/group">
             Group
           </Link>
