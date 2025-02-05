@@ -14,10 +14,9 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        comfortaa: "var(--font-ltComfortaa)",
-        dela: "var(--font-jpDela)",
-        shippori: "var(--font-jpShippori)",
-        barlow: "var(--font-ltBarlow)",
+        ltanaheim: "var(--font-ltanaheim)",
+        jpshippori: "var(--font-jpShippori)",
+        ltradio: "var(--font-ltradio)",
       },
     },
   },
