@@ -16,6 +16,7 @@ import { usePathname } from "next/navigation";
 
 export const SakamichiLogo = () => {
   return (
+    <Link href="/">
     <Image
       priority={true}
       src={"/logo.png"}
@@ -23,6 +24,7 @@ export const SakamichiLogo = () => {
       height={50}
       alt="sakamichi logo"
     />
+    </Link>
   );
 };
 
@@ -56,7 +58,7 @@ export default function Navigation() {
     >
       <NavbarBrand>
         <SakamichiLogo />
-        <p className="font-ltanaheim font-bold text-inherit">SAKAMICHI</p>
+        <Link href="/" className="font-ltanaheim font-bold text-inherit">SAKAMICHI</Link >
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-6" justify="center">
         <Dropdown>
@@ -75,7 +77,7 @@ export default function Navigation() {
               key="newest"
               description="All Newest Sakamichi Group Single Release"
             >
-              <Link aria-current="page" color="foreground" href="/single">
+              <Link  color="foreground" href="/single">
                 New Release
               </Link>
             </DropdownItem>
@@ -100,19 +102,19 @@ export default function Navigation() {
           </DropdownMenu>
         </Dropdown>
         <NavbarItem className="mx-2" isActive={pathname.startsWith("/member")}>
-          <Link aria-current="page" color="foreground" href="/member">
+          <Link  color="foreground" href="/member">
             Members
           </Link>
         </NavbarItem>
         <NavbarItem className="mx-2" isActive={pathname.startsWith("/group")}>
-          <Link aria-current="page" color="foreground" href="/group">
+          <Link  color="foreground" href="/group">
             Group
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Link as={Link} color="primary" href="#">
+          <Link color="primary" href="#">
             <Image
               src={"/socmed/discord-mark-black.png"}
               width={"0"}
