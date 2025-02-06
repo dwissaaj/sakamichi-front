@@ -12,6 +12,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        nogicolor: "#CB9DF0",
+        sakucolor: "#F0A8D0",
+        hinatacolor: "#BFECFF",
       },
       fontFamily: {
         ltanaheim: "var(--font-ltanaheim)",

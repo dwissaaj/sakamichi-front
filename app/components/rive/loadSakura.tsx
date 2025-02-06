@@ -1,19 +1,13 @@
-'use client'
-import { useRive } from '@rive-app/react-canvas';
+"use client";
+import { useRive } from "@rive-app/react-canvas";
 export default function LoadSakura() {
   const { RiveComponent } = useRive({
-    src: '/rive/sakamichi.riv',
+    src: "/rive/sakamichi.riv",
     stateMachines: "turning",
-    artboard: 'Sakura',
+    artboard: "Sakura",
     autoplay: true,
-    animations: 'Round'
-
+    animations: "Round",
   });
-  
-  return (
-    <RiveComponent
-    style={{height: 500, width: 500}}
-    
-    />
-  );
+
+  return <RiveComponent style={{ height: 500, width: 500 }} />;
 }
