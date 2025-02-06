@@ -1,11 +1,11 @@
 import React from "react";
 import { Card, CardFooter, Image, Link } from "@heroui/react";
-interface SingleCard {
+interface SingleCardType {
   $id: string;
   name: string;
   mainCover: string;
 }
-export default function SingleCard({ $id, name, mainCover }: SingleCard) {
+export default function SingleCard({ $id, name, mainCover }: SingleCardType) {
   return (
     <Link
       color="foreground"
