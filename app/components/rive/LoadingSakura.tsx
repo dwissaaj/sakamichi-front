@@ -3,8 +3,8 @@ import { useRive } from "@rive-app/react-canvas";
 export default function LoadSakura() {
   const { RiveComponent } = useRive({
     src: "/rive/sakamichi.riv",
-    stateMachines: "turning",
-    artboard: "Sakura",
+    stateMachines: "Circle",
+    artboard: "Sakura Loading",
     autoplay: true,
     animations: "Round",
   });

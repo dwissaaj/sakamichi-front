@@ -109,8 +109,8 @@ export default function Navigation() {
           </Link>
         </NavbarItem>
         <NavbarItem className="mx-2" isActive={pathname.startsWith("/group")}>
-          <Link color="foreground" href="/group">
-            Group
+          <Link color="foreground" href="/fansite">
+            Fansite
           </Link>
         </NavbarItem>
       </NavbarContent>

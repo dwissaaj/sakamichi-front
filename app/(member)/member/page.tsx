@@ -2,7 +2,7 @@ import React from "react";
 import getMember from "@/app/utils/getMember";
 import MemberCard from "@/app/components/member/MemberCard";
 export default async function Page() {
-  const member = await getMember();
+  const cover = await getMember();
   return (
     <div className="flex flex-col gap-4 mt-8 justify-center items-center w-full">
       <div>
@@ -11,15 +11,13 @@ export default async function Page() {
         </p>
       </div>
       <div className="w-full flex justify-center gap-6">
-        {member.documents?.map((item: MemberResponse) => {
-          if (!item.galleries || item.galleries.length === 0) return null;
-          const latestGallery = item.galleries[0];
+        {cover.cover?.documents.map((item) => {
           return (
             <MemberCard
               key={item.$id}
-              name={item.name}
-              kanji={item.nameKanji}
-              url={latestGallery.url}
+              name={item.galleryOfMember?.name}
+              kanji={item.galleryOfMember?.nameKanji}
+              url={item.url}
             />
           );
         })}
@@ -27,17 +25,3 @@ export default async function Page() {
     </div>
   );
 }
-
-// {member.documents?.map((item: MemberResponse) => {
-//   return (
-//     <div key={item.$id}>
-//       <p>{item.name}</p>
-
-//       {item.galleries?.map((gallery) => (
-//         <div key={gallery.$id}>
-//           <p>{gallery.url}</p>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// })}

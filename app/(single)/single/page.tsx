@@ -1,14 +1,10 @@
 import SingleCard from "@/app/components/single/SingleCard";
 import getSingle from "../../utils/getSingle";
-import { SingleDataType } from "./single.dto";
-import Loading from "@/app/loading";
-
 export default async function Page() {
   const single = await getSingle();
 
   return (
     <div className="flex flex-col gap-4 mt-8 justify-center items-center w-full">
-      <Loading />
       <div>
         <p className="font:md lg:text-5xl font-ltradio font-bold">
           All Song Released by{" "}
@@ -16,14 +12,14 @@ export default async function Page() {
         </p>
       </div>
       <div className="w-full flex justify-center ">
-        {single.documents?.map((item: SingleDataType) => (
+        {single.documents?.[0] && (
           <SingleCard
-            key={item.$id}
-            $id={item.$id}
-            name={item.name}
-            mainCover={item.mainCover}
+            key={single.documents[0].$id}
+            $id={single.documents[0].$id}
+            name={single.documents[0].name}
+            mainCover={single.documents[0].url}
           />
-        ))}
+        )}
       </div>
     </div>
   );

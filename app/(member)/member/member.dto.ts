@@ -1,30 +1,47 @@
-interface MemberResponse {
-  name: string;
-  birthdate: string;
-  penlight: any[]; // Replace with a more specific type if needed
-  nickname: string;
-  debut: string;
-  graduate: boolean;
-  bloodtype: string;
-  agency: string;
-  nameKana: string;
-  nameKanji: string;
-  generation: number;
-  group: string;
-  birthplace: string;
-  height: number;
-  $id: string;
-  $createdAt: string;
-  $updatedAt: string;
-  $permissions: string[];
-  singles: any[];
-  socialMedia: any;
-  galleries: any[];
-  $databaseId: string;
-  $collectionId: string;
+export interface CoverResponse {
+  cover: {
+    documents: CoverMemberType[];
+    total: number;
+  };
 }
 
-interface MemberResponse {
-  total: number;
-  documents: MemberResponse[];
+export interface CoverMemberType {
+  $databaseId: string;
+  $collectionId: string;
+  $id: string;
+  $permissions: string[];
+  $updatedAt: string;
+  $createdAt: string;
+  date: string;
+  isProfile: boolean;
+  name: string;
+  url: string;
+  galleryOfMember: MemberType;
+}
+
+export interface MemberType {
+  $databaseId: string;
+  $collectionId: string;
+  $id: string;
+  $permissions: string[];
+  $updatedAt: string;
+  $createdAt: string;
+  agency: string;
+  birthdate: string;
+  birthplace: string;
+  bloodtype: string | null;
+  debut: string;
+  funfact: string[];
+  gallery: string[];
+  generation: number;
+  graduate: boolean;
+  group: string;
+  height: number;
+  name: string;
+  nameKana: string;
+  nameKanji: string;
+  nickname: string[];
+  penlight: string[];
+  singles: string[];
+  socialMedias: string | null;
 }
