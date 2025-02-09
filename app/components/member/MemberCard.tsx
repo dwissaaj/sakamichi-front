@@ -1,13 +1,19 @@
+"use client"
 import React from "react";
-import { Card, CardFooter, Image } from "@heroui/react";
+import { Card, CardFooter, Image, Link } from "@heroui/react";
 interface MemberCard {
   name: string;
   url: string;
   kanji: string;
   key: string;
+  link: string
 }
-export default function MemberCard({ name, url, kanji, key }: MemberCard) {
+export default function MemberCard({ name, url, kanji, key, link }: MemberCard) 
+ 
+{
+
   return (
+    <Link href={`/member/${link}`}>
     <Card key={key} className="w-44 h-56 lg:w-60 lg:h-72">
       <Image
         removeWrapper
@@ -19,6 +25,6 @@ export default function MemberCard({ name, url, kanji, key }: MemberCard) {
         <p className="font-jpshippori font-bold shadow-lg">{kanji}</p>
         <h4 className="font-ltradio shadow-lg">{name}</h4>
       </CardFooter>
-    </Card>
+    </Card></Link>
   );
 }

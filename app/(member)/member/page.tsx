@@ -14,10 +14,11 @@ export default async function Page() {
         {cover.cover?.documents.map((item) => {
           return (
             <MemberCard
-              key={item.$id}
+              key={item.galleryOfMember?.$id}
               name={item.galleryOfMember?.name}
               kanji={item.galleryOfMember?.nameKanji}
               url={item.url}
+              link={item.galleryOfMember?.$id}
             />
           );
         })}
