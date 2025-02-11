@@ -22,8 +22,8 @@ export default function MemberCard({ name, url, kanji, key, link }: MemberCard)
         src={url}
       />
       <CardFooter className="absolute z-10 bottom-1 flex-col items-center">
-        <p className="font-jpshippori font-bold shadow-lg">{kanji}</p>
-        <h4 className="font-ltradio shadow-lg">{name}</h4>
+        <p className="font-jpshippori font-bold text-white shadow-lg">{kanji}</p>
+        <h4 className="font-ltradio shadow-lg text-white">{name}</h4>
       </CardFooter>
     </Card></Link>
   );
