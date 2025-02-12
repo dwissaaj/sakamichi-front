@@ -18,7 +18,9 @@ export default async function Page() {
               name={item.galleryOfMember?.name}
               kanji={item.galleryOfMember?.nameKanji}
               url={item.url}
-              link={`${item.galleryOfMember?.$id}`}
+              link={`${item.galleryOfMember?.$id}/${
+                item.galleryOfMember?.name.toLowerCase().replace(/\s+/g, "-")
+              }`}
             />
           );
         })}

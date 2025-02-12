@@ -11,8 +11,8 @@ export interface ProfileCardProps {
   name: string;
   nameKana: string;
   nameKanji: string;
-  nickname: string[]
-  penlight: string[]
+  nickname: string[];
+  penlight: string[];
 }
 
 export interface ProfileType {
@@ -33,6 +33,6 @@ export interface ProfileType {
   name: string;
   nameKana: string;
   nameKanji: string;
-  nickname: string[]
-  penlight: string[]
+  nickname: string[];
+  penlight: string[];
 }

@@ -7,7 +7,7 @@ export default async function GetProfile(id: string): Promise<ProfileType> {
     const response = await axios.get(
       `https://sakamichi.cloud/api/member/get/${id}`,
     );
-    return response.data
+    return response.data;
   } catch (error) {
     console.error("Error fetching member data:", error);
     return notFound();

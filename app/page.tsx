@@ -1,6 +1,6 @@
 import { Button, Image, Link } from "@heroui/react";
 
-export default async function Home() {
+export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center m-8 gap-4 font-ltradio">
       <div className="flex flex-col items-center">

@@ -1,26 +1,25 @@
 import React from "react";
 
-
 import { Divider } from "@heroui/react";
-import { ProfileCardProps} from "@/app/utils/member/profile/profile.dto";
+import { ProfileCardProps } from "@/app/utils/member/profile/profile.dto";
 
 export default function ProfileCard({
-    name,
-    nameKanji,
-    nameKana,
-    nickname,
-    penlight,
-    birthdate,
-    birthplace,
-    height,
-    bloodtype,
-    generation,
-    group,
-    agency,
-    debut,
-    graduate
-  }: ProfileCardProps) { 
-    return ( 
+  name,
+  nameKanji,
+  nameKana,
+  nickname,
+  penlight,
+  birthdate,
+  birthplace,
+  height,
+  bloodtype,
+  generation,
+  group,
+  agency,
+  debut,
+  graduate,
+}: ProfileCardProps) {
+  return (
     <div className="flex flex-col gap-1 items-center">
       <div>
         <h1 className="text-2xl font-bold font-ltradio border-b-2 border-foreground py-1">
@@ -34,7 +33,7 @@ export default function ProfileCard({
       </div>
       <div className="flex flex-row gap-2 font-ltradio text-sm lg:text-xl border-b-2 border-foreground py-1">
         <p>{nickname}</p>
-        <Divider orientation="vertical"  />
+        <Divider orientation="vertical" />
         <p>{penlight}</p>
         <Divider orientation="vertical" />
       </div>
@@ -56,6 +55,4 @@ export default function ProfileCard({
       </div>
     </div>
   );
-};
-
-
+}

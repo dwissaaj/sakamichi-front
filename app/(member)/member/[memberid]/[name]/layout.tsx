@@ -1,4 +1,3 @@
-
 export default async function MemberLayout({
   profile,
   gallery,

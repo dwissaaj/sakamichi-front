@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Card, CardFooter, Image, Link } from "@heroui/react";
-import GetProfile from "@/app/utils/member/profile/getProfile";
 interface MemberCard {
   name: string;
   url: string;
