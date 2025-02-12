@@ -1,10 +1,10 @@
-export default async function SocialLayout({
+export default function SocialLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <section>
+    <section className="my-2">
       {children}
     </section>
   );

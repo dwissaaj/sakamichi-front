@@ -1,4 +1,4 @@
-export default async function FunfactLayout({
+export default function FunfactLayout({
   children,
 }: {
   children: React.ReactNode;

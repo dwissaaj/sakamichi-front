@@ -19,3 +19,14 @@ export const fakejson = {
   "$databaseId": "679b63a300144b73519f",
   "$collectionId": "67a33b380038182add3d",
 };
+
+export const fakeSocial = {
+  "instagram": "https://www.google.com/",
+  "website": "https://www.google.com/",
+  "showroom": "https://www.google.com/",
+  "blog": "https://www.google.com/",
+  "other": "https://www.google.com/",
+  "$id": "67aaf430001cb388e9d0",
+  "$createdAt": "2025-02-11T06:54:40.804+00:00",
+  "$updatedAt": "2025-02-11T06:54:40.804+00:00",
+};

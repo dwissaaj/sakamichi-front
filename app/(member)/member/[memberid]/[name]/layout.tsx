@@ -1,4 +1,4 @@
-export default async function MemberLayout({
+export default function MemberLayout({
   profile,
   gallery,
   social,
@@ -10,7 +10,7 @@ export default async function MemberLayout({
   funfact: React.ReactNode;
 }) {
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center gap-2">
       {profile}
       {social}
       {gallery}

@@ -1,4 +1,4 @@
-export default async function GalleryLayout({
+export default function GalleryLayout({
   children,
 }: {
   children: React.ReactNode;
