@@ -8,7 +8,7 @@ export async function generateMetadata(
   const member = await GetProfile(id);
   const { name, group, generation, birthplace, debut, graduate, height } =
     member;
-  const title = `${name} (${group}) - Profile & Details`;
+  const title = `${name} ${group.toUpperCase()}`;
   const description =
     `${name} is a ${generation}-generation member of ${group}. Born in ${birthplace}, she debuted on ${
       new Date(debut).toLocaleDateString()

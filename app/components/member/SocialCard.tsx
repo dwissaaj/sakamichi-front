@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "@heroui/react";
 import { SocialCardProps } from "@/app/utils/member/profile/social.dto";
 export default function SocialCard(
-  { instagram, website, other, blog, showroom, key }: SocialCardProps,
+  { instagram, website, other, blog, showroom }: SocialCardProps,
 ) {
   return (
-    <div key={key}>
+    <div>
       <Link
         isExternal
         isBlock

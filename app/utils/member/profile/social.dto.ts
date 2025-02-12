@@ -21,5 +21,4 @@ export interface SocialCardProps {
   showroom: string;
   blog: string;
   other: string;
-  key: string;
 }

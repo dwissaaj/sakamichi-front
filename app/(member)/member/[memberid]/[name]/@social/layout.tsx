@@ -4,7 +4,7 @@ export default function SocialLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="my-2">
+    <section className="w-full flex flex-col items-center justify-center">
       {children}
     </section>
   );

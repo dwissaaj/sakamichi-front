@@ -10,11 +10,11 @@ export default function MemberLayout({
   funfact: React.ReactNode;
 }) {
   return (
-    <div className="w-full flex flex-col items-center gap-2">
+    <div className="w-full flex flex-col gap-2">
       {profile}
       {social}
-      {gallery}
       {funfact}
+      {gallery}
     </div>
   );
 }
