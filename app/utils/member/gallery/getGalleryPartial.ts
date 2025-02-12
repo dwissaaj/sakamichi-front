@@ -1,8 +1,8 @@
 import axios from "axios";
 import { notFound } from "next/navigation";
-import { CoverResponse } from "../../(member)/member/member.dto";
+import { CoverResponse } from "./gallery.dto";
 
-export default async function getMember(): Promise<CoverResponse> {
+export default async function getGalleryPartial(): Promise<CoverResponse> {
   try {
     const response = await axios.get(
       "https://sakamichi.cloud/api/member/gallery/partial",

@@ -31,8 +31,6 @@ export interface MemberType {
   birthplace: string;
   bloodtype: string | null;
   debut: string;
-  funfact: string[];
-  gallery: string[];
   generation: number;
   graduate: boolean;
   group: string;
@@ -40,8 +38,5 @@ export interface MemberType {
   name: string;
   nameKana: string;
   nameKanji: string;
-  nickname: string[];
-  penlight: string[];
-  singles: string[];
   socialMedias: string | null;
 }

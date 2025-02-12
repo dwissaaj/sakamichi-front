@@ -1,4 +1,4 @@
-import { Shippori_Mincho, Anaheim, Radio_Canada } from "next/font/google";
+import { Anaheim, Radio_Canada, Shippori_Mincho } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import Navigation from "./components/navigation/Navigation";

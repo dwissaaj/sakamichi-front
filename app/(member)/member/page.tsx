@@ -1,5 +1,5 @@
 import React from "react";
-import getMember from "@/app/utils/member/getMember";
+import getMember from "@/app/utils/member/gallery/getGalleryPartial";
 import MemberCard from "@/app/components/member/MemberCard";
 export default async function Page() {
   const cover = await getMember();
@@ -18,7 +18,9 @@ export default async function Page() {
               name={item.galleryOfMember?.name}
               kanji={item.galleryOfMember?.nameKanji}
               url={item.url}
-              link={item.galleryOfMember?.name}
+              link={`${item.galleryOfMember?.$id}/${
+                item.galleryOfMember?.name.toLowerCase().replace(/\s+/g, "-")
+              }`}
             />
           );
         })}

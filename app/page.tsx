@@ -1,11 +1,11 @@
-import { Button, Link, Image } from "@heroui/react";
+import { Button, Image, Link } from "@heroui/react";
 
 export default async function Home() {
   return (
     <div className="flex flex-col items-center justify-center m-8 gap-4 font-ltradio">
       <div className="flex flex-col items-center">
         <p className="font-md lg:text-5xl  font-bold">
-          <span className="text-primary-500">Sakamichi </span> Group Fansite
+          <span className="text-primary-500">Sakamichi</span> Group Fansite
         </p>
         <p className="font-semibold font-sm lg:text-2xl text-white/50">
           Let's support our girls! Shop at their website
