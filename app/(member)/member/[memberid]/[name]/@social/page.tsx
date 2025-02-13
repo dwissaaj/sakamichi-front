@@ -8,7 +8,7 @@ export default async function Page(
   const id = (await params).memberid;
   const social = await GetSocial(id);
   return (
-    <div className="">
+    <div className="border-2 rounded-md p-2">
       {social?.social?.documents?.map((item) => (
         <SocialCard
           key={item.$id}

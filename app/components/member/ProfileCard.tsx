@@ -20,7 +20,7 @@ export default function ProfileCard({
   graduate,
 }: ProfileCardProps) {
   return (
-    <div className="flex flex-col gap-1 items-center">
+    <div className="flex flex-col gap-1 items-center ">
       <div>
         <h1 className="text-2xl font-bold font-ltradio border-b-2 border-foreground py-1">
           {name}

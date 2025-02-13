@@ -4,7 +4,7 @@ export default function ProfileLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="w-full flex flex-col items-center justify-center">
+    <section className="w-full flex flex-col items-center justify-center ">
       {children}
     </section>
   );

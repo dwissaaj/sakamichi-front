@@ -5,10 +5,9 @@ export default async function Page(
   { params }: { params: { "memberid": string; name: string } },
 ) {
   const id = (await params).memberid;
-  const funfact = await GetFunfact(id);
-  console.log("as", funfact);
+  const funfactResponse = await GetFunfact(id);
   return (
-    <div>
+    <div className="border-2 rounded-md p-2">
       <div>
         <p className="text-2xl lg:text-5xl font-ltradio font-bold">
           Member Funfact & <span className="text-primary-500">Moments</span>
@@ -19,7 +18,7 @@ export default async function Page(
           <h2 className="font-sm lg:text-3xl font-bold font-ltradio ">
             Funfact
           </h2>
-          {funfact?.trivia?.documents.map((item) =>
+          {funfactResponse?.funfact?.documents.map((item) =>
             item.funfact.map((fact, index) => <li key={index}>{fact}</li>)
           )}
         </div>
@@ -27,7 +26,7 @@ export default async function Page(
           <h2 className="font-sm lg:text-3xl font-bold font-ltradio ">
             Variety Moment
           </h2>
-          {funfact?.trivia?.documents.map((item) =>
+          {funfactResponse?.funfact?.documents.map((item) =>
             item.variety.map((fact, index) => <li key={index}>{fact}</li>)
           )}
         </div>

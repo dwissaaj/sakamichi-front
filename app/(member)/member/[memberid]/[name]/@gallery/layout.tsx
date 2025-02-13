@@ -4,7 +4,7 @@ export default function GalleryLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section>
+    <section className="min-h-screen w-full overflow-x-hidden">
       {children}
     </section>
   );

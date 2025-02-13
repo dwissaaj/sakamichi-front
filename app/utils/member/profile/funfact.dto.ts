@@ -6,7 +6,7 @@ export interface FunfactType {
   $updatedAt: string;
 }
 export interface FunfactResponse {
-  trivia: {
+  funfact: {
     total: number;
     documents: FunfactType[];
   };
