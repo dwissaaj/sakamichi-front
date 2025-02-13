@@ -40,5 +40,5 @@ jobs:
           project: "sakamichi-front"
           entrypoint: "jsr:@deno/nextjs-start"
           root: "."
-          include: .next, public
+          
           
