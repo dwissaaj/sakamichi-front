@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Divider } from "@heroui/react";
+import { Divider, Image } from "@heroui/react";
 import { ProfileCardProps } from "@/app/utils/member/profile/profile.dto";
 
 export default function ProfileCard({
@@ -18,9 +18,13 @@ export default function ProfileCard({
   agency,
   debut,
   graduate,
+  profilePic,
 }: ProfileCardProps) {
   return (
     <div className="flex flex-col gap-1 items-center ">
+      <div>
+        <Image alt={name} className="w-32 md:w-42 lg:w-52" isBlurred src={profilePic} />
+      </div>
       <div>
         <h1 className="text-2xl font-bold font-ltradio border-b-2 border-foreground py-1">
           {name}

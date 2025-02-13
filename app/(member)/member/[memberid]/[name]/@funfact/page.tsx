@@ -1,13 +1,15 @@
 import GetFunfact from "@/app/utils/member/profile/getFunfact";
 import React from "react";
 
-export default async function Page(
-  { params }: { params: { "memberid": string; name: string } },
-) {
+export default async function Page({
+  params,
+}: {
+  params: { memberid: string; name: string };
+}) {
   const id = (await params).memberid;
   const funfactResponse = await GetFunfact(id);
   return (
-    <div className="border-2 rounded-md p-2">
+    <div className="">
       <div>
         <p className="text-2xl lg:text-5xl font-ltradio font-bold">
           Member Funfact & <span className="text-primary-500">Moments</span>
@@ -19,7 +21,7 @@ export default async function Page(
             Funfact
           </h2>
           {funfactResponse?.funfact?.documents.map((item) =>
-            item.funfact.map((fact, index) => <li key={index}>{fact}</li>)
+            item.funfact.map((fact, index) => <li key={index}>{fact}</li>),
           )}
         </div>
         <div>
@@ -27,7 +29,7 @@ export default async function Page(
             Variety Moment
           </h2>
           {funfactResponse?.funfact?.documents.map((item) =>
-            item.variety.map((fact, index) => <li key={index}>{fact}</li>)
+            item.variety.map((fact, index) => <li key={index}>{fact}</li>),
           )}
         </div>
       </div>

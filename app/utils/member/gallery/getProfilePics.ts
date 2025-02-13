@@ -5,7 +5,7 @@ import { CoverProfileResponse } from "./gallery.dto";
 export default async function GetCoverMembers(): Promise<CoverProfileResponse> {
   try {
     const response = await axios.get(
-      "https://sakamichi.cloud/api/member/profile",
+      `${process.env.NEXT_PUBLIC_DOMAIN}/api/member/profile`,
     );
     return response.data;
   } catch (error) {

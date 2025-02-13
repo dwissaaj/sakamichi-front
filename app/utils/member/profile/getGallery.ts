@@ -5,7 +5,7 @@ import { GalleryResponse } from "./gallery.dto";
 export default async function GetGallery(id: string): Promise<GalleryResponse> {
   try {
     const response = await axios.get(
-      `https://sakamichi.cloud/api/member/gallery/${id}`,
+      `${process.env.NEXT_PUBLIC_DOMAIN}/api/member/gallery/${id}`,
     );
     return response.data;
   } catch (error) {

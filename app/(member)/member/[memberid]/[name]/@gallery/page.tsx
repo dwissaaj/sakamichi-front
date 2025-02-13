@@ -2,12 +2,13 @@ import GalleryCard from "@/app/components/member/GalleryCard";
 import GetGallery from "@/app/utils/member/profile/getGallery";
 import React from "react";
 
-export default async function Page(
-  { params }: { params: { "memberid": string; name: string } },
-) {
+export default async function Page({
+  params,
+}: {
+  params: { memberid: string; name: string };
+}) {
   const id = (await params).memberid;
   const galleryResponse = await GetGallery(id);
-  console.log("galler", galleryResponse);
   return (
     <div className="w-full flex items-center justify-center flex-col gap-4">
       <div className="">

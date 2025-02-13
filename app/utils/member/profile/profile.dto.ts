@@ -13,6 +13,7 @@ export interface ProfileCardProps {
   nameKanji: string;
   nickname: string[];
   penlight: string[];
+  profilePic?: string;
 }
 
 export interface ProfileType {

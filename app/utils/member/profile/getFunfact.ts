@@ -5,7 +5,7 @@ import { FunfactResponse } from "./funfact.dto";
 export default async function GetFunfact(id: string): Promise<FunfactResponse> {
   try {
     const response = await axios.get(
-      `https://sakamichi.cloud/api/member/funfact/${id}`,
+      `${process.env.NEXT_PUBLIC_DOMAIN}/api/member/funfact/${id}`,
     );
     return response.data;
   } catch (error) {

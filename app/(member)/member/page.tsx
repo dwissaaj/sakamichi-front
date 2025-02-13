@@ -20,9 +20,9 @@ export default async function Page() {
               id={item?.$id}
               name={item?.name}
               profilePic={item.profilePic}
-              link={`${item.$id}/${
-                item?.name.toLowerCase().replace(/\s+/g, "-")
-              }`}
+              link={`${item.$id}/${item?.name
+                .toLowerCase()
+                .replace(/\s+/g, "-")}`}
             />
           );
         })}

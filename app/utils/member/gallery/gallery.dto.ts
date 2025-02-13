@@ -9,7 +9,7 @@ export interface CoverProfileProps {
   $id: string;
   name: string;
   profilePic: string;
-  group: string
+  group: string;
 }
 
 export interface MemberType {
@@ -33,5 +33,3 @@ export interface MemberType {
   nameKanji: string;
   socialMedias: string | null;
 }
-
-

@@ -8,7 +8,7 @@ export default function Home() {
           <span className="text-primary-500">Sakamichi</span> Group Fansite
         </p>
         <p className="font-semibold font-sm lg:text-2xl text-white/50">
-          Let's support our girls! Shop at their website
+          Lets support our girls! Shop at their website
         </p>
       </div>
       <div className="flex gap-4">

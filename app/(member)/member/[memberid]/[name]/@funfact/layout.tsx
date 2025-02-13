@@ -4,8 +4,6 @@ export default function FunfactLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="flex justify-center items-start">
-      {children}
-    </section>
+    <section className="flex justify-center items-start">{children}</section>
   );
 }
