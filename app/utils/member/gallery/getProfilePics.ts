@@ -1,11 +1,11 @@
 import axios from "axios";
 import { notFound } from "next/navigation";
-import { CoverResponse } from "./gallery.dto";
+import { CoverProfileResponse } from "./gallery.dto";
 
-export default async function getGalleryPartial(): Promise<CoverResponse> {
+export default async function GetCoverMembers(): Promise<CoverProfileResponse> {
   try {
     const response = await axios.get(
-      "https://sakamichi.cloud/api/member/gallery/partial",
+      "https://sakamichi.cloud/api/member/profile",
     );
     return response.data;
   } catch (error) {

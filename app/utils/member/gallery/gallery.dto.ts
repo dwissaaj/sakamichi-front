@@ -1,22 +1,15 @@
-export interface CoverResponse {
-  cover: {
-    documents: CoverMemberType[];
+export interface CoverProfileResponse {
+  profile: {
+    documents: CoverProfileProps[];
     total: number;
   };
 }
 
-export interface CoverMemberType {
-  $databaseId: string;
-  $collectionId: string;
+export interface CoverProfileProps {
   $id: string;
-  $permissions: string[];
-  $updatedAt: string;
-  $createdAt: string;
-  date: string;
-  isProfile: boolean;
   name: string;
-  url: string;
-  galleryOfMember: MemberType;
+  profilePic: string;
+  group: string
 }
 
 export interface MemberType {
@@ -40,3 +33,5 @@ export interface MemberType {
   nameKanji: string;
   socialMedias: string | null;
 }
+
+

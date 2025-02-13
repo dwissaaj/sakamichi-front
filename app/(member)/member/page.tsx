@@ -1,8 +1,9 @@
 import React from "react";
-import getMember from "@/app/utils/member/gallery/getGalleryPartial";
+import GetMembersProfile from "@/app/utils/member/gallery/getProfilePics";
 import MemberCard from "@/app/components/member/MemberCard";
+import { CoverProfileProps } from "@/app/utils/member/gallery/gallery.dto";
 export default async function Page() {
-  const cover = await getMember();
+  const cover = await GetMembersProfile();
   return (
     <div className="flex flex-col gap-4 mt-8 justify-center items-center w-full">
       <div>
@@ -11,15 +12,16 @@ export default async function Page() {
         </p>
       </div>
       <div className="w-full flex justify-center gap-6">
-        {cover.cover?.documents.map((item) => {
+        {cover?.profile?.documents.map((item: CoverProfileProps) => {
           return (
             <MemberCard
-              key={item.galleryOfMember?.$id}
-              name={item.galleryOfMember?.name}
-              kanji={item.galleryOfMember?.nameKanji}
-              url={item.url}
-              link={`${item.galleryOfMember?.$id}/${
-                item.galleryOfMember?.name.toLowerCase().replace(/\s+/g, "-")
+              key={item?.$id}
+              group={item?.group}
+              id={item?.$id}
+              name={item?.name}
+              profilePic={item.profilePic}
+              link={`${item.$id}/${
+                item?.name.toLowerCase().replace(/\s+/g, "-")
               }`}
             />
           );
