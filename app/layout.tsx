@@ -1,4 +1,4 @@
-import { Shippori_Mincho, Anaheim, Radio_Canada } from "next/font/google";
+import { Anaheim, Radio_Canada, Sawarabi_Gothic } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import Navigation from "./components/navigation/Navigation";
@@ -18,10 +18,10 @@ export const metadata: Metadata = {
   creator: "Sakamichi Fansite",
   publisher: "Sakamichi Fansite",
 };
-const jpShippori = Shippori_Mincho({
-  weight: ["400", "600", "800"],
+const jpgothic = Sawarabi_Gothic({
+  weight: ["400"],
   subsets: ["latin"],
-  variable: "--font-jpShippori",
+  variable: "--font-jpgothic",
 });
 
 const ltanaheim = Anaheim({
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ltanaheim.variable} ${jpShippori.variable} ${ltradio.variable} antialiased`}
+        className={`${ltanaheim.variable} ${jpgothic.variable} ${ltradio.variable} antialiased`}
       >
         <Providers>
           <Navigation />

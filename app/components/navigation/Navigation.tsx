@@ -1,28 +1,33 @@
 "use client";
 import {
+  Button,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
+  Link,
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
-  Button,
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
+  Switch,
 } from "@heroui/react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-
+import { MoonIcon } from "./MoonIcon";
+import { SunIcon } from "./SunIcon";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 export const SakamichiLogo = () => {
   return (
-    <Image
-      priority={true}
-      src={"/logo.png"}
-      width={50}
-      height={50}
-      alt="sakamichi logo"
-    />
+    <Link href="/">
+      <Image
+        priority={true}
+        src={"/logo.png"}
+        width={50}
+        height={50}
+        alt="sakamichi logo"
+      />
+    </Link>
   );
 };
 
@@ -56,7 +61,9 @@ export default function Navigation() {
     >
       <NavbarBrand>
         <SakamichiLogo />
-        <p className="font-ltanaheim font-bold text-inherit">SAKAMICHI</p>
+        <Link href="/" className="font-ltanaheim font-bold text-inherit">
+          SAKAMICHI
+        </Link>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-6" justify="center">
         <Dropdown>
@@ -75,7 +82,7 @@ export default function Navigation() {
               key="newest"
               description="All Newest Sakamichi Group Single Release"
             >
-              <Link aria-current="page" color="foreground" href="/single">
+              <Link color="foreground" href="/single">
                 New Release
               </Link>
             </DropdownItem>
@@ -100,19 +107,19 @@ export default function Navigation() {
           </DropdownMenu>
         </Dropdown>
         <NavbarItem className="mx-2" isActive={pathname.startsWith("/member")}>
-          <Link aria-current="page" color="foreground" href="/member">
+          <Link color="foreground" href="/member">
             Members
           </Link>
         </NavbarItem>
         <NavbarItem className="mx-2" isActive={pathname.startsWith("/group")}>
-          <Link aria-current="page" color="foreground" href="/group">
-            Group
+          <Link color="foreground" href="/fansite">
+            Fansite
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Link as={Link} color="primary" href="#">
+          <Link color="primary" href="#">
             <Image
               src={"/socmed/discord-mark-black.png"}
               width={"0"}
@@ -121,6 +128,12 @@ export default function Navigation() {
               alt="discord logo"
             />
           </Link>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent>
+        <NavbarItem>
+
+      <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
     </Navbar>
