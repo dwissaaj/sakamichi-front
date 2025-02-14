@@ -5,7 +5,7 @@ import React from "react";
 export default async function Page({
   params,
 }: {
-  params: Promise<{ memberid: string; name: string }>
+  params: Promise<{ memberid: string; name: string }>;
 }) {
   const id = (await params).memberid;
   const galleryResponse = await GetGallery(id);

@@ -23,7 +23,12 @@ export default function ProfileCard({
   return (
     <div className="flex flex-col gap-1 items-center ">
       <div>
-        <Image alt={name} className="w-32 md:w-42 lg:w-52" isBlurred src={profilePic} />
+        <Image
+          alt={name}
+          className="w-32 md:w-42 lg:w-52"
+          isBlurred
+          src={profilePic}
+        />
       </div>
       <div>
         <h1 className="text-2xl font-bold font-ltradio border-b-2 border-foreground py-1">

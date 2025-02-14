@@ -1,4 +1,4 @@
-import { Anaheim, Sawarabi_Gothic, Radio_Canada } from "next/font/google";
+import { Anaheim, Radio_Canada, Sawarabi_Gothic } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import Navigation from "./components/navigation/Navigation";

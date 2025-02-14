@@ -25,9 +25,7 @@ export default function MemberCard({
           src={profilePic}
         />
         <CardFooter className="absolute z-10 bottom-1 flex-col items-center">
-          <p className="font-jpgothic font-bold text-white shadow-lg">
-            {name}
-          </p>
+          <p className="font-jpgothic font-bold text-white shadow-lg">{name}</p>
           <h4 className="font-ltradio shadow-lg text-white">
             {group.charAt(0).toUpperCase() + group.slice(1)}
           </h4>

@@ -5,7 +5,7 @@ import SocialCard from "@/app/components/member/SocialCard";
 export default async function Page({
   params,
 }: {
-  params: Promise<{ memberid: string; name: string }>
+  params: Promise<{ memberid: string; name: string }>;
 }) {
   const id = (await params).memberid;
   const social = await GetSocial(id);

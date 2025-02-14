@@ -10,10 +10,13 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  Switch,
 } from "@heroui/react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-
+import { MoonIcon } from "./MoonIcon";
+import { SunIcon } from "./SunIcon";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 export const SakamichiLogo = () => {
   return (
     <Link href="/">
@@ -125,6 +128,12 @@ export default function Navigation() {
               alt="discord logo"
             />
           </Link>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent>
+        <NavbarItem>
+
+      <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
     </Navbar>
