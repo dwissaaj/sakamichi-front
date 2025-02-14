@@ -4,10 +4,10 @@ import React from "react";
 export default async function Page({
   params,
 }: {
-  params: { memberid: string; name: string };
+  params: Promise<{ memberid: string; name: string }>
 }) {
-  const id = (await params).memberid;
-  const funfactResponse = await GetFunfact(id);
+  const {memberid} = await params
+  const funfactResponse = await GetFunfact(memberid);
   return (
     <div className="">
       <div>

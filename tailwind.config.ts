@@ -18,7 +18,7 @@ export default {
       },
       fontFamily: {
         ltanaheim: "var(--font-ltanaheim)",
-        jpshippori: "var(--font-jpShippori)",
+        jpbiz: "var(--font-jpgothic)",
         ltradio: "var(--font-ltradio)",
       },
     },

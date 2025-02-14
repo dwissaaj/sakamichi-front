@@ -31,7 +31,7 @@ export default function ProfileCard({
         </h1>
       </div>
       <div>
-        <h2 className="text-sm lg:text-xl font-jpshippori border-b-2 border-foreground py-1">
+        <h2 className="text-sm lg:text-xl font-jpgothic border-b-2 border-foreground py-1">
           {nameKanji} {nameKana}
         </h2>
       </div>

@@ -3,7 +3,7 @@ import { GetProfile } from "@/app/utils/member/profile/getProfile";
 export async function generateMetadata({
   params,
 }: {
-  params: { memberid: string; name: string };
+  params: Promise<{ memberid: string, name: string }>
 }) {
   const id = (await params).memberid;
   const memberName = (await params).name;
@@ -32,10 +32,10 @@ export async function generateMetadata({
 export default async function Page({
   params,
 }: {
-  params: { memberid: string; name: string };
+  params: Promise<{ memberid: string }>
 }) {
-  const id = (await params).memberid;
-  const memberData = await GetProfile(id);
+  const {memberid} = await params
+    const memberData = await GetProfile(memberid);
   return (
     <ProfileCard
       profilePic={memberData.profilePic}
