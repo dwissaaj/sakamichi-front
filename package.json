@@ -6,10 +6,14 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview": "opennextjs-cloudflare && wrangler dev",
+    "deploy": "opennextjs-cloudflare && wrangler deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@heroui/react": "^2.6.14",
+    "@opennextjs/cloudflare": "^0.5.1",
     "@rive-app/react-canvas": "^4.17.10",
     "axios": "^1.7.9",
     "framer-motion": "^12.0.6",

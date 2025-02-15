@@ -1,4 +1,4 @@
-import SingleCard from "@/app/components/single/SingleCard";
+import SingleCards from "@/app/components/single/SingleCard";
 import getSingle from "../../utils/getSingle";
 export default async function Page() {
   const single = await getSingle();
@@ -13,7 +13,7 @@ export default async function Page() {
       </div>
       <div className="w-full flex justify-center ">
         {single.documents?.[0] && (
-          <SingleCard
+          <SingleCards
             key={single.documents[0].$id}
             $id={single.documents[0].$id}
             name={single.documents[0].name}

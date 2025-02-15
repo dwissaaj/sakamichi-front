@@ -5,7 +5,7 @@ interface SingleCardType {
   name: string;
   mainCover: string;
 }
-export default function SingleCard({ $id, name, mainCover }: SingleCardType) {
+export default function SingleCards({ $id, name, mainCover }: SingleCardType) {
   return (
     <Link
       color="foreground"

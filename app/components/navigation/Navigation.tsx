@@ -10,12 +10,9 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Switch,
 } from "@heroui/react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { MoonIcon } from "./MoonIcon";
-import { SunIcon } from "./SunIcon";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 export const SakamichiLogo = () => {
   return (
@@ -132,8 +129,7 @@ export default function Navigation() {
       </NavbarContent>
       <NavbarContent>
         <NavbarItem>
-
-      <ThemeSwitcher />
+          <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
     </Navbar>
