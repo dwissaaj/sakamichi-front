@@ -9,7 +9,7 @@ export default async function GetGallery(id: string): Promise<GalleryResponse> {
     );
     return response.data;
   } catch (error) {
-    console.error("Error fetching member data:", error);
+    console.error("Error fetching gallery page:", error);
     return notFound();
   }
 }

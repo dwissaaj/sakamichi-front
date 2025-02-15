@@ -9,7 +9,7 @@ export const GetProfile = cache(async (id: string) => {
     );
     return response.data;
   } catch (error) {
-    console.error("Error fetching member data:", error);
+    console.error("Error at get member profile:", error);
     return notFound();
   }
 });

@@ -9,7 +9,7 @@ export default async function GetFunfact(id: string): Promise<FunfactResponse> {
     );
     return response.data;
   } catch (error) {
-    console.error("Error fetching member data:", error);
+    console.error("Error at funfact page getting data:", error);
     return notFound();
   }
 }

@@ -6,14 +6,13 @@ import { useEffect, useState } from "react";
 import { Switch } from "@heroui/react";
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   if (!mounted) return null;
-  console.log(theme);
   return (
     <Switch
       defaultSelected

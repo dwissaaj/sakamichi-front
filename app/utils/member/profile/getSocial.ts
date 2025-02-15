@@ -9,7 +9,7 @@ export default async function GetSocial(id: string): Promise<SocialResponse> {
     );
     return response.data;
   } catch (error) {
-    console.error("Error fetching member data:", error);
+    console.error("Error fetching member social media:", error);
     return notFound();
   }
 }
