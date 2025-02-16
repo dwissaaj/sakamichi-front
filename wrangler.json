@@ -7,5 +7,6 @@
     "assets": {
       "directory": ".open-next/assets",
       "binding": "ASSETS"
-    }
+    },
+    "routes": [{ "pattern": "sakamichi.cloud/*", "custom_domain": true }]
 }
