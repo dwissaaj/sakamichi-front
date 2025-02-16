@@ -1,12 +1,11 @@
 {
-    "$schema": "node_modules/wrangler/config-schema.json",
-    "main": ".open-next/worker.js",
-    "name": "sakamichi-front",
-    "compatibility_date": "2025-02-12",
-    "compatibility_flags": ["nodejs_compat"],
-    "assets": {
-      "directory": ".open-next/assets",
-      "binding": "ASSETS"
-    },
-    "routes": [{ "pattern": "sakamichi.cloud/*", "custom_domain": true }]
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "sakamichi-front",
+  "compatibility_date": "2025-02-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  }
 }

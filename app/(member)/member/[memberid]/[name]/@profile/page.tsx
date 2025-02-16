@@ -1,7 +1,6 @@
 import ProfileCard from "@/app/components/member/ProfileCard";
 import { GetProfile } from "@/app/utils/member/profile/getProfile";
 
-
 export default async function Page({
   params,
 }: {
@@ -9,7 +8,7 @@ export default async function Page({
 }) {
   const { memberid } = await params;
   const memberData = await GetProfile(memberid);
-  console.log("GET REQ GET PROFILE")
+  console.log("GET REQ GET PROFILE");
   return (
     <ProfileCard
       profilePic={memberData.profilePic}

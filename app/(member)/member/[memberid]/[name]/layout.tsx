@@ -3,7 +3,7 @@ export default function MemberLayout({
   gallery,
   social,
   funfact,
-  children
+  children,
 }: {
   children: React.ReactNode;
   profile: React.ReactNode;

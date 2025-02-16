@@ -14,7 +14,7 @@ export async function generateMetadata({
   const description = `${name} is a ${generation}-generation member of ${group}. Born in ${birthplace}, she debuted on ${new Date(
     debut,
   ).toLocaleDateString()} and is currently ${graduate}. Height: ${height} cm.`;
-  
+
   return {
     title,
     description,
@@ -32,9 +32,9 @@ export async function generateMetadata({
 export default async function Page() {
   return (
     <div className="flex flex-col items-center justify-center">
-        <p className="text-xl lg:text-2xl font-ltradio font-bold">
-          Talk about <span className="text-primary-500">her</span>
-        </p>
+      <p className="text-xl lg:text-2xl font-ltradio font-bold">
+        Talk about <span className="text-primary-500">her</span>
+      </p>
     </div>
-  )
+  );
 }

@@ -1,5 +1,5 @@
 import SinglesCards from "@/app/components/single/singleCard";
-import getSingle from "../../utils/getSingle";
+import getSingle from "../../utils/member/single/getSingle";
 export default async function Page() {
   const single = await getSingle();
 
@@ -12,14 +12,16 @@ export default async function Page() {
         </p>
       </div>
       <div className="w-full flex justify-center ">
-        {single.documents?.[0] && (
-          <SinglesCards
-            key={single.documents[0].$id}
-            $id={single.documents[0].$id}
-            name={single.documents[0].name}
-            mainCover={single.documents[0].url}
-          />
-        )}
+        {single?.single?.documents.map((item) => {
+          return (
+            <SinglesCards
+            key={item.$id}
+              $id={item.$id}
+              mainTrack={item.mainTrack}
+              url={item.url}
+            />
+          );
+        })}
       </div>
     </div>
   );
