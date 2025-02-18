@@ -1,3 +1,4 @@
+"use client"
 import { GalleryCardProps } from "@/app/utils/member/profile/gallery.dto";
 import React from "react";
 import { Card, CardBody, CardFooter, Image } from "@heroui/react";

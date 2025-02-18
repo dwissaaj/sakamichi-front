@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { Card, CardFooter, Image, Link } from "@heroui/react";
 interface SingleCardType {
